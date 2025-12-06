@@ -2,15 +2,33 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.0.
 
+It is a simple **Angular CRUD application for Products**. You can **Create, Read, Update, and Delete products**, and it includes a **fake JSON file** (`db.json`) to simulate the backend data.
+
+---
+
+## 📝 Features
+
+* List all products
+* Add a new product
+* Edit existing products
+* Delete products
+* Uses a fake JSON file (`db.json`) as data source
+
+---
+
 ## Development server
 
 To start a local development server, run:
 
 ```bash
+cd frontend-tasks/mohamed-ibrahim/crud-with-angular
+npm install
 ng serve
 ```
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+
+---
 
 ## Code scaffolding
 
@@ -26,6 +44,8 @@ For a complete list of available schematics (such as `components`, `directives`,
 ng generate --help
 ```
 
+---
+
 ## Building
 
 To build the project run:
@@ -36,6 +56,8 @@ ng build
 
 This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
 
+---
+
 ## Running unit tests
 
 To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
@@ -43,6 +65,8 @@ To execute unit tests with the [Karma](https://karma-runner.github.io) test runn
 ```bash
 ng test
 ```
+
+---
 
 ## Running end-to-end tests
 
@@ -54,6 +78,35 @@ ng e2e
 
 Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
+---
+
+## Using the Fake Data
+
+The project includes `db.json` as a fake backend. You can simulate API calls using [json-server](https://www.npmjs.com/package/json-server):
+
+```bash
+npm install -g json-server
+json-server --watch db.json
+```
+
+By default, the fake API will run on:
+
+```
+http://localhost:3000/products
+```
+
+Your Angular services are configured to fetch data from this endpoint.
+
+---
+
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+---
+
+## Notes
+
+* **Do not commit `node_modules/`** — it is ignored by `.gitignore`.
+* You can modify `db.json` to add more fake products.
+
